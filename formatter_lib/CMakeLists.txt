@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.4)
+project(formatter)
+set(CMAKE_CXX_STANDART 11)
+set(CMAKE_CXX_STANDART_REQUIRED ON)
+add_library(formatter STATIC /home/enenra/lab03/lab03/formatter_lib/formatter.cpp)
+include_directories(/home/enenra/enenra/lab03/lab03/formatter_lib)
