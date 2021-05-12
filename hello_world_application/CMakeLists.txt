@@ -1,8 +1,13 @@
 cmake_minimum_required(VERSION 3.4)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 project(hello_world)
-set(CMAKE_CXX_STANDART 11)
-set(CMAKE_CXX_STANDART_REQURED ON)
-add_library(hello STATIC /home/enenra/lab03/lab03/formatter_ex_lib/formatter_ex.cpp /home/enenra/lab03/lab03/formatter_lib/formatter.cpp)
-include_directories (/home/enenra/lab03/lab03/formatter_ex_lib /home/enenra/lab03/lab03/formatter_lib)
-add_executable(Hello /home/enenra/lab03/lab03/hello_world_application/hello_world.cpp)
-target_link_libraries(Hello hello)
+
+add_executable(hello_world hello_world.cpp)
+
+include_directories(../formatter_ex_lib)
+add_subdirectory(../formatter_ex_lib formatter_ex)
+
+target_link_libraries(hello_world formatter_ex)
