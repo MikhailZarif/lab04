@@ -1,0 +1,9 @@
+language: cpp
+compiler: gcc
+addons:
+ubuntu-toolchain-precise-3.6 packages:
+g++-7
+clang-3.6
+script:
+cmake CMakeLists.txt
+cmake --build
